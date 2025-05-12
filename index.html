@@ -4,12 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=428, initial-scale=1.0" />
     <title>Мой мобильный сайт</title>
+
+    <!-- Стили -->
+    <style>
+      @font-face {
+        font-family: 'HelveticaNeueCyr';
+        src: url('HelveticaNeueCyrRoman.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      .ticker {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 428px;
+        height: 45px;
+        background-color: #F33918;
+        overflow: hidden;
+        z-index: 9999;
+      }
+
+      .ticker__content {
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+        animation: scroll 10s linear infinite;
+        font-family: 'HelveticaNeueCyr', sans-serif;
+        font-size: 14px;
+        color: white;
+        gap: 6px;
+        padding-left: 100%;
+      }
+
+      .ticker__content span {
+        margin-right: 2px;
+      }
+
+      .icon {
+        width: 14px;
+        height: 14px;
+        margin: 0 2px;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
   </head>
+
   <body style="margin: 0; padding: 0; background-color: black;">
+    <!-- Бегущая строка -->
+    <div class="ticker">
+      <div class="ticker__content">
+        <span>LIMITED OFFER</span>
+        <img src="camera-flash-svgrepo-com%201.svg" alt="icon" class="icon" />
+        <span>LIMITED OFFER</span>
+        <img src="camera-flash-svgrepo-com%201.svg" alt="icon" class="icon" />
+        <span>LIMITED OFFER</span>
+        <img src="camera-flash-svgrepo-com%201.svg" alt="icon" class="icon" />
+        <span>LIMITED OFFER</span>
+        <img src="camera-flash-svgrepo-com%201.svg" alt="icon" class="icon" />
+      </div>
+    </div>
+
+    <!-- Фон -->
     <img
-      src="Mask%20group%20(15).png"
-      alt="Фон"
-      style="width: 100%; max-width: 428px; display: block; margin: 0 auto;"
-    />
+  src="Mask%20group%20(15).png"
+  alt="Фон"
+  style="width: 100%; max-width: 428px; display: block; margin: 0 auto;"
+/>
   </body>
 </html>
