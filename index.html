@@ -18,20 +18,27 @@
         background-color: black;
         font-family: sans-serif;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .ticker-wrapper-outer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
       }
 
       .ticker-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        max-width: 428px;
+        width: 428px;
         height: 45px;
         background-color: #F33918;
         overflow: hidden;
         z-index: 1000;
         display: flex;
         align-items: center;
+        position: absolute;
+        top: 0;
       }
 
       .ticker {
@@ -61,24 +68,29 @@
       }
 
       @keyframes scroll-left {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
       }
 
       .background-image {
         width: 100%;
         max-width: 428px;
         display: block;
-        margin: 0 auto;
       }
     </style>
   </head>
   <body>
-    <div class="ticker-wrapper">
-      <div class="ticker">
-        <div class="ticker-content">
-          <span>LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER</span>
-          <span>LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER</span>
+    <div class="ticker-wrapper-outer">
+      <div class="ticker-wrapper">
+        <div class="ticker">
+          <div class="ticker-content">
+            <span>LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER</span>
+            <span>LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER</span>
+          </div>
         </div>
       </div>
     </div>
