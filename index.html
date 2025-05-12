@@ -1,68 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=428, initial-scale=1.0" />
-  <title>Мой мобильный сайт</title>
-  <style>
-    @font-face {
-      font-family: 'Helvetica Neue';
-      src: url('HelveticaNeueCyrRoman.woff2') format('woff2');
-      font-weight: normal;
-      font-style: normal;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: black;
-    }
-    .ticker-wrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      max-width: 428px;
-      height: 45px;
-      background-color: #F33918;
-      overflow: hidden;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-    }
-    .ticker {
-      display: flex;
-      animation: scroll 15s linear infinite;
-      font-size: 14px;
-      font-family: 'Helvetica Neue', sans-serif;
-      color: white;
-    }
-    .ticker span {
-      display: flex;
-      align-items: center;
-      margin-right: 12px;
-    }
-    .ticker img {
-      width: 25px;
-      height: 25px;
-      margin: 0 2px;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-  </style>
-</head>
-<body>
-  <div class="ticker-wrapper">
-    <div class="ticker">
-      <span>LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER</span>
-    </div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=428, initial-scale=1.0" />
+    <title>Мой мобильный сайт</title>
+    <style>
+      @font-face {
+        font-family: 'Helvetica Neue';
+        src: url('HelveticaNeueCyrRoman.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
 
-  <img
-    src="Mask%20group%20(15).png"
-    alt="Фон"
-    style="width: 100%; max-width: 428px; display: block; margin: 0 auto;"
-  />
-</body>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        font-family: sans-serif;
+        position: relative;
+      }
+
+      .ticker-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 428px;
+        height: 45px;
+        background-color: #F33918;
+        overflow: hidden;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+      }
+
+      .ticker {
+        display: flex;
+        width: 100%;
+        white-space: nowrap;
+      }
+
+      .ticker-content {
+        display: inline-flex;
+        animation: scroll-left 15s linear infinite;
+      }
+
+      .ticker-content span {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-family: 'Helvetica Neue', sans-serif;
+        color: white;
+        margin-right: 24px;
+      }
+
+      .ticker-content img {
+        width: 25px;
+        height: 25px;
+        margin: 0 2px;
+      }
+
+      @keyframes scroll-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      .background-image {
+        width: 100%;
+        max-width: 428px;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ticker-wrapper">
+      <div class="ticker">
+        <div class="ticker-content">
+          <span>LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER</span>
+          <span>LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER <img src="camera-flash-svgrepo-com%201.svg" alt="icon"> LIMITED OFFER</span>
+        </div>
+      </div>
+    </div>
+
+    <img
+      class="background-image"
+      src="Mask%20group%20(15).png"
+      alt="Фон"
+    />
+  </body>
 </html>
